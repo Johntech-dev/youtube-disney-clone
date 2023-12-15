@@ -53,7 +53,7 @@ function Header() {
          <div className='md:hidden' onClick={()=>setToggle(!toggle)}>       
             <HeaderItem name={''} Icon={HiDotsVertical} />
            {toggle? <div className='absolute mt-3 bg-[#121212] 
-            border-[1px] border-gray-700 p-3 px-5 py-4 overflow-hidden'>
+            border-[1px] border-gray-700 p-3 px-5 py-4 overflow-hidden left-[20px]'>
             {menu.map((item,index)=>index>2&&(
             <HeaderItem name={item.name} Icon={item.icon} />
             ))}
