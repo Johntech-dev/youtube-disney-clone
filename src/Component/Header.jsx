@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Logo from '../assests/Images/logo.svg'
 import { HiHome,
    HiMagnifyingGlass,
@@ -9,7 +9,7 @@ import { HiPlus,HiDotsVertical } from "react-icons/hi";
 import HeaderItem from './HeaderItem';
 
 function Header() {
-
+ const [toggle, setToggle] = useState(false)
 const menu = [
    {
       name:'HOME',
@@ -46,6 +46,20 @@ const menu = [
    {menu.map((item)=>(
        <HeaderItem name={item.name} Icon={item.icon} />
    ))}
+   </div>
+   <div className='flex md:hidden gap-8'>
+   {menu.map((item, index)=> index<3&&(
+       <HeaderItem name={''} Icon={item.icon} />
+   ))}
+   </div>
+   <div className='md:hidden gap-8' onClick={() =>setToggle(!toggle)}>
+       <HeaderItem name={''} Icon={HiDotsVertical} />
+   {toggle?<div className=' absolute mt-3'>
+   {menu.map((item, index)=> index>2&&(
+       <HeaderItem name={item.name} Icon={item.icon} />
+   ))}
+       </div>:null
+}
    </div>
    </div>
    <img src="https://ps.w.org/user-avatar-reloaded/assets/icon-256x256.png?rev=2540745"
