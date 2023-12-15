@@ -47,14 +47,14 @@ const menu = [
        <HeaderItem name={item.name} Icon={item.icon} />
    ))}
    </div>
-   <div className='flex md:hidden gap-8'>
+   <div className='flex md:hidden gap-4'>
    {menu.map((item, index)=> index<3&&(
        <HeaderItem name={''} Icon={item.icon} />
    ))}
    </div>
-   <div className='md:hidden gap-8' onClick={() =>setToggle(!toggle)}>
+   <div className='md:hidden' onClick={() =>setToggle(!toggle)}>
        <HeaderItem name={''} Icon={HiDotsVertical} />
-   {toggle?<div className=' absolute mt-3'>
+   {toggle?<div className=' absolute mt-4'>
    {menu.map((item, index)=> index>2&&(
        <HeaderItem name={item.name} Icon={item.icon} />
    ))}
