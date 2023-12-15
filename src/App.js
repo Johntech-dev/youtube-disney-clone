@@ -1,5 +1,6 @@
 import './App.css'
 import Header from './Component/Header';
+import Slider from './Component/Slider';
 
 function App() {
   const containerStyle = {
@@ -11,6 +12,8 @@ function App() {
   return (
     <div style={containerStyle}>
       <Header />
+      
+      <Slider />
      </div>
   );
 }
