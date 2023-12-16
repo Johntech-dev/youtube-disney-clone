@@ -32,8 +32,7 @@ function Slider() {
         onClick={()=>sliderRight(elementRef.current)} />
 
    
-    <div className='flex overflow-x-auto w-full px-16 py-4
-    scrollbar-none scroll-none' ref={elementRef}> 
+    <div className='flex overflow-x-auto w-full px-16 py-4 ' ref={elementRef}> 
         {movieList.map((item)=>(
             <img src={IMAGE_BASE_URL+item.backdrop_path} 
             className='min-w-full  md:h-[310px] object-cover
